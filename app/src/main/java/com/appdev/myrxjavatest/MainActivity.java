@@ -8,6 +8,9 @@ import android.view.View;
 
 import org.reactivestreams.Subscription;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.reactivex.BackpressureStrategy;
 import io.reactivex.Flowable;
 import io.reactivex.FlowableEmitter;
@@ -198,5 +201,34 @@ public class MainActivity extends AppCompatActivity {
                         subscription.request(Long.MAX_VALUE);
                     }
                 });
+    }
+
+    public void test6(View view) {
+        List<String> list = new ArrayList<>();
+        list.add("s1");
+        list.add("s2");
+        Observable.just(list).subscribe(new Observer<List<String>>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(List<String> strings) {
+                Log.d("yaowang","strings");
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
     }
 }

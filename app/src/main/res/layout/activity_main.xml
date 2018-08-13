@@ -37,6 +37,12 @@
         android:text="test5"
         android:onClick="test5"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test6"
+        android:onClick="test6"
+        />
 
 
 </LinearLayout>
